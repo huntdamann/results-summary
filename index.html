@@ -40,6 +40,7 @@
       border-radius: 10%;
       box-shadow: 0.5rem 1rem 3rem rgba(234, 217, 255, 0.5);
       margin-top: 200px;
+      overflow: auto;
     
     }
     .outside-container .results-container-div {
@@ -85,11 +86,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(30deg, hsla(252, 100%, 50%, 0.4), hsla(241, 81%, 54%, 1) 50%);                   
+      background: linear-gradient(30deg, hsla(252, 100%, 50%, 0.3), hsla(241, 81%, 54%, 0.6) 50%);
+      overflow: inherit;                  
     }
-    .results-container-div ,.circle-information-div .score {
-      
-    }
+   
     .score {
 
       font-size: 3rem;
@@ -108,7 +108,7 @@
     }
     
     .results-container-div .encouraging-words-div {
-      margin-top: 40px;
+      margin-top: 30px;
       width: 50%;
       min-height: 50px;
       text-align: center;
@@ -121,10 +121,11 @@
       color: white;
       font-size: 25px;
       opacity: 0.9;
+      overflow: inherit;
 
     }
     .results-container-div .more-info-div {
-      margin-top: 30px;
+      margin-top: 10px;
       width: 50%;
       min-height: -30px;
       font-weight: 500;
@@ -185,6 +186,7 @@
 
       font-family: 'Hanken Grotesk', sans-serif;
       margin-left: 10px;
+      font-weight: 600;
     }
     .score-0 {
 
@@ -192,13 +194,21 @@
       font-weight: 800;
       margin-left: 150px;
     }
+    .summary-container-div .gray-out {
+
+      color: gray;
+      opacity: 0.7;
+      font-family: 'Hanken Grotesk', sans-serif;
+      margin-left: 10px;
+      font-weight: 700;
+    }
     .summary-container-div .verbal-container-div .score-0 {
 
       margin-left: 163px;
     }
     .summary-container-div .visual-container-div .score-0 {
 
-      margin-left: 163px;
+      margin-left: 168px;
     }
 
     .summary-container-div .memory-container-div {
@@ -255,6 +265,7 @@
       justify-content: center;
       margin: auto;
       border-radius: 30px;
+      overflow: inherit;
     }
     .continue-button-container .continue {
 
@@ -262,11 +273,17 @@
       font-family: 'Hanken Grotesk', sans-serif;
       font-size: 15px;
       font-weight: 500;
+      overflow: inherit;
+    }
+    #reaction-text {
+      color: rgba(255, 198, 196, 1);
     }
     #memory-text {
 
       color: rgba(255, 170, 51, 1);
     }
+    #verbal-text {color: rgba(0, 109, 91, 1);}
+    #visual-text {color: rgba(0, 71, 171, 1);}
     
     .attribution { font-size: 11px; text-align: center; margin-top: 50px; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -300,12 +317,12 @@
       </div>
       <div class="reaction-container-div">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#F55" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M10.833 8.333V2.5l-6.666 9.167h5V17.5l6.666-9.167h-5Z"/></svg>
-        <p class = "Category">
+        <p class = "Category" id="reaction-text">
           Reaction
         </p>
         <p class = "score-0">
-          <strong>80</strong> / 100
-        </p>
+          <strong>80</strong> 
+        </p><p class ="gray-out"> / 100</p>
       </div>
       <div class="memory-container-div">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M5.833 11.667a2.5 2.5 0 1 0 .834 4.858"/><path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M3.553 13.004a3.333 3.333 0 0 1-.728-5.53m.025-.067a2.083 2.083 0 0 1 2.983-2.824m.199.054A2.083 2.083 0 1 1 10 3.75v12.917a1.667 1.667 0 0 1-3.333 0M10 5.833a2.5 2.5 0 0 0 2.5 2.5m1.667 3.334a2.5 2.5 0 1 1-.834 4.858"/><path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M16.447 13.004a3.334 3.334 0 0 0 .728-5.53m-.025-.067a2.083 2.083 0 0 0-2.983-2.824M10 3.75a2.085 2.085 0 0 1 2.538-2.033 2.084 2.084 0 0 1 1.43 2.92m-.635 12.03a1.667 1.667 0 0 1-3.333 0"/></svg>        
@@ -313,26 +330,26 @@
           Memory
         </p>
         <p class = "score-0">
-          92 / 100
-        </p>
+          92 
+        </p><p class ="gray-out"> / 100</p>
       </div>
       <div class="verbal-container-div">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#00BB8F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M7.5 10h5M10 18.333A8.333 8.333 0 1 0 1.667 10c0 1.518.406 2.942 1.115 4.167l-.699 3.75 3.75-.699A8.295 8.295 0 0 0 10 18.333Z"/></svg>        
-        <p class = "Category">
+        <p class = "Category" id =  "verbal-text">
           Verbal
         </p>
         <p class = "score-0">
-          61 / 100
-        </p>
+          61 
+        </p><p class ="gray-out"> / 100</p>
       </div>
       <div class="visual-container-div">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#1125D6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M10 11.667a1.667 1.667 0 1 0 0-3.334 1.667 1.667 0 0 0 0 3.334Z"/><path stroke="#1125D6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M17.5 10c-1.574 2.492-4.402 5-7.5 5s-5.926-2.508-7.5-5C4.416 7.632 6.66 5 10 5s5.584 2.632 7.5 5Z"/></svg>
-        <p class = "Category">
+        <p class = "Category" id="visual-text">
           Visual
         </p>
         <p class = "score-0">
-          72 / 100
-        </p>
+          72
+        </p><p class ="gray-out"> / 100</p>
 
       </div>
       <div class="continue-button-container ">
